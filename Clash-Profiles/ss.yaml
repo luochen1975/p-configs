@@ -14,12 +14,6 @@ dns:
   - 8.8.8.8
   - 8.8.4.4
 proxies:
-- name: SS-C20P-🇺🇸(US)-92.118.112.101
-  type: ss
-  server: 92.118.112.101
-  port: 9483
-  cipher: chacha20-ietf-poly1305
-  password: NfVVRTUXgji9xB4gSohL3v
 - name: SS-C20P-🇫🇷(FR)-62.210.88.22
   type: ss
   server: 62.210.88.22
@@ -48,7 +42,6 @@ proxy-groups:
 - name: ⚡ Auto-Select-SS
   type: url-test
   proxies: &id001
-  - SS-C20P-🇺🇸(US)-92.118.112.101
   - SS-C20P-🇫🇷(FR)-62.210.88.22
   - SS-C20P-🇩🇪(DE)-51.195.101.222
   - SS-A256GCM-🇸🇬(SG)-172.237.74.36
@@ -69,7 +62,6 @@ proxy-groups:
   proxies:
   - ⚡ Auto-Select-SS
   - 🔗 Auto-Failover-SS
-  - SS-C20P-🇺🇸(US)-92.118.112.101
   - SS-C20P-🇫🇷(FR)-62.210.88.22
   - SS-C20P-🇩🇪(DE)-51.195.101.222
   - SS-A256GCM-🇸🇬(SG)-172.237.74.36
