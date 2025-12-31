@@ -14,24 +14,6 @@ dns:
   - 8.8.8.8
   - 8.8.4.4
 proxies:
-- name: SS-C20P-🇫🇷(FR)-62.210.88.22
-  type: ss
-  server: 62.210.88.22
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: R1kvgSMrv2aFloN7SrYVuK
-- name: SS-C20P-🇫🇮(FI)-65.21.243.22
-  type: ss
-  server: 65.21.243.22
-  port: 31348
-  cipher: chacha20-ietf-poly1305
-  password: mZGUFWMAlfWqI4vP58zw9DAHxR8TZLndKkvRgHHFa9eqWdnx
-- name: SS-C20P-🇭🇷(HR)-pro.turbooserver.com
-  type: ss
-  server: pro.turbooserver.com
-  port: 1084
-  cipher: chacha20-ietf-poly1305
-  password: 3CzOPSKLa_vvzCgSePdIWw
 - name: SS-A256GCM-🇸🇬(SG)-172.237.74.36
   type: ss
   server: 172.237.74.36
@@ -44,15 +26,26 @@ proxies:
   port: 443
   cipher: chacha20-ietf-poly1305
   password: SVt6ZiWzRI1Yxeig4xBZwiJOt6ceXwGa
+- name: SS-C20P-🇫🇮(FI)-65.21.243.22
+  type: ss
+  server: 65.21.243.22
+  port: 31348
+  cipher: chacha20-ietf-poly1305
+  password: mZGUFWMAlfWqI4vP58zw9DAHxR8TZLndKkvRgHHFa9eqWdnx
+- name: SS-A256GCM-🇰🇷(KR)-141.164.45.187
+  type: ss
+  server: 141.164.45.187
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
 proxy-groups:
 - name: ⚡ Auto-Select-SS
   type: url-test
   proxies: &id001
-  - SS-C20P-🇫🇷(FR)-62.210.88.22
-  - SS-C20P-🇫🇮(FI)-65.21.243.22
-  - SS-C20P-🇭🇷(HR)-pro.turbooserver.com
   - SS-A256GCM-🇸🇬(SG)-172.237.74.36
   - SS-C20P-🇦🇺(AU)-95.111.222.113
+  - SS-C20P-🇫🇮(FI)-65.21.243.22
+  - SS-A256GCM-🇰🇷(KR)-141.164.45.187
   tolerance: 50
   lazy: false
   url: https://aistudio.google.com/prompts/new_chat
@@ -69,11 +62,10 @@ proxy-groups:
   proxies:
   - ⚡ Auto-Select-SS
   - 🔗 Auto-Failover-SS
-  - SS-C20P-🇫🇷(FR)-62.210.88.22
-  - SS-C20P-🇫🇮(FI)-65.21.243.22
-  - SS-C20P-🇭🇷(HR)-pro.turbooserver.com
   - SS-A256GCM-🇸🇬(SG)-172.237.74.36
   - SS-C20P-🇦🇺(AU)-95.111.222.113
+  - SS-C20P-🇫🇮(FI)-65.21.243.22
+  - SS-A256GCM-🇰🇷(KR)-141.164.45.187
 rule-providers:
   adblock:
     type: http
